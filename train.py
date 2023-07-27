@@ -108,11 +108,11 @@ def train(
     no_label: bool = True,
     tune_text: bool = False,
     save_step: int = None,
-    grad_acc: int = 10,
+    grad_acc: int = 8,
     use_scaler: bool = False,
     weight_decay: float = 1e-5,
     warmup_steps: int = 10,
-    batch_size: int = 12,
+    batch_size: int = 10,
     use_cfg: bool = False,
     save_path: str = "models/",
 ):
