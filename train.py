@@ -175,7 +175,7 @@ def train(
             optimizer.zero_grad()
 
             all_codes = []
-            texts = "" # []
+            texts = [] # ""
 
             # where audio and label are just paths
             for inner_audio, l in zip(audio, label):
@@ -189,7 +189,7 @@ def train(
                     codes = inner_audio
 
                 all_codes.append(codes)
-                # texts.append(open(l, "r").read().strip())
+                texts.append(open(l, "r").read().strip())
 
             attributes, _ = model._prepare_tokens_and_attributes(texts, None)
             conditions = attributes
